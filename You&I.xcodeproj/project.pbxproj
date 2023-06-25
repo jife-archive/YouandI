@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		098B28AA2A45CDAD00FB0F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B28A92A45CDAD00FB0F81 /* AppDelegate.swift */; };
 		098B28AC2A45CDAD00FB0F81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B28AB2A45CDAD00FB0F81 /* SceneDelegate.swift */; };
-		098B28AE2A45CDAD00FB0F81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B28AD2A45CDAD00FB0F81 /* ViewController.swift */; };
 		098B28B32A45CDAF00FB0F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098B28B22A45CDAF00FB0F81 /* Assets.xcassets */; };
 		098B28B62A45CDAF00FB0F81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 098B28B42A45CDAF00FB0F81 /* LaunchScreen.storyboard */; };
 		098B28C12A45CF3D00FB0F81 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B28C02A45CF3D00FB0F81 /* MainViewController.swift */; };
+		098B28C42A45D2D100FB0F81 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 098B28C32A45D2D100FB0F81 /* SnapKit */; };
+		098B28C72A45D31F00FB0F81 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 098B28C62A45D31F00FB0F81 /* Then */; };
+		099D8DC52A4880E7009E33C1 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 099D8DC42A4880E7009E33C1 /* SideMenu */; };
+		099D8DC72A48812B009E33C1 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */; };
+		09D8DF212A46F58E009A6B17 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D8DF202A46F58E009A6B17 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		098B28A62A45CDAC00FB0F81 /* You&I.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "You&I.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		098B28A92A45CDAD00FB0F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		098B28AB2A45CDAD00FB0F81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		098B28AD2A45CDAD00FB0F81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		098B28B22A45CDAF00FB0F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		098B28B52A45CDAF00FB0F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		098B28B72A45CDAF00FB0F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		098B28C02A45CF3D00FB0F81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
+		09D8DF202A46F58E009A6B17 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098B28C42A45D2D100FB0F81 /* SnapKit in Frameworks */,
+				099D8DC52A4880E7009E33C1 /* SideMenu in Frameworks */,
+				098B28C72A45D31F00FB0F81 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +64,12 @@
 		098B28A82A45CDAC00FB0F81 /* You&I */ = {
 			isa = PBXGroup;
 			children = (
+				09D8DF1C2A46F56F009A6B17 /* Utils */,
 				098B28BF2A45CF0D00FB0F81 /* Models */,
 				098B28BE2A45CF0A00FB0F81 /* Controllers */,
 				098B28BD2A45CF0800FB0F81 /* Views */,
 				098B28A92A45CDAD00FB0F81 /* AppDelegate.swift */,
 				098B28AB2A45CDAD00FB0F81 /* SceneDelegate.swift */,
-				098B28AD2A45CDAD00FB0F81 /* ViewController.swift */,
 				098B28B22A45CDAF00FB0F81 /* Assets.xcassets */,
 				098B28B42A45CDAF00FB0F81 /* LaunchScreen.storyboard */,
 				098B28B72A45CDAF00FB0F81 /* Info.plist */,
@@ -80,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				098B28C02A45CF3D00FB0F81 /* MainViewController.swift */,
+				099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -89,6 +98,14 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		09D8DF1C2A46F56F009A6B17 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				09D8DF202A46F58E009A6B17 /* Colors.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +124,11 @@
 			dependencies = (
 			);
 			name = "You&I";
+			packageProductDependencies = (
+				098B28C32A45D2D100FB0F81 /* SnapKit */,
+				098B28C62A45D31F00FB0F81 /* Then */,
+				099D8DC42A4880E7009E33C1 /* SideMenu */,
+			);
 			productName = "You&I";
 			productReference = 098B28A62A45CDAC00FB0F81 /* You&I.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +157,11 @@
 				Base,
 			);
 			mainGroup = 098B289D2A45CDAC00FB0F81;
+			packageReferences = (
+				098B28C22A45D2D100FB0F81 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				098B28C52A45D31F00FB0F81 /* XCRemoteSwiftPackageReference "Then" */,
+				099D8DC32A4880E7009E33C1 /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 098B28A72A45CDAC00FB0F81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,7 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				098B28AE2A45CDAD00FB0F81 /* ViewController.swift in Sources */,
+				099D8DC72A48812B009E33C1 /* SideMenuNavigationController.swift in Sources */,
+				09D8DF212A46F58E009A6B17 /* Colors.swift in Sources */,
 				098B28AA2A45CDAD00FB0F81 /* AppDelegate.swift in Sources */,
 				098B28AC2A45CDAD00FB0F81 /* SceneDelegate.swift in Sources */,
 				098B28C12A45CF3D00FB0F81 /* MainViewController.swift in Sources */,
@@ -374,6 +402,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		098B28C22A45D2D100FB0F81 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		098B28C52A45D31F00FB0F81 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		099D8DC32A4880E7009E33C1 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		098B28C32A45D2D100FB0F81 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 098B28C22A45D2D100FB0F81 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		098B28C62A45D31F00FB0F81 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 098B28C52A45D31F00FB0F81 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		099D8DC42A4880E7009E33C1 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 099D8DC32A4880E7009E33C1 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 098B289E2A45CDAC00FB0F81 /* Project object */;
 }
