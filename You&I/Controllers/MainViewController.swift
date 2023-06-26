@@ -24,7 +24,8 @@ class MainViewController: UIViewController {
     }
     private let welecomeSV = UIStackView().then{
         $0.axis = .vertical
-        $0.spacing = 0
+        $0.spacing = 2
+        $0.distribution = .fill
     }
     private func layout(){
         self.nicknameLabel.snp.makeConstraints{
@@ -38,9 +39,9 @@ class MainViewController: UIViewController {
         welecomeSV.addArrangedSubview(welecomeLabel)
         welecomeSV.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(20)
+            $0.top.equalToSuperview().offset(75)
             
         }
-        navigationItem.title = "니캉내캉"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: nil, action: nil)
     }
     override func viewDidLoad() {
