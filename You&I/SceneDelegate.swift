@@ -6,22 +6,29 @@
 //
 
 import UIKit
+import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+         if let url = URLContexts.first?.url {
+             if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                 _ = AuthController.handleOpenUrl(url: url)
+             }
+         }
+     }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
         let mainViewController = MainViewController()
-        let loginVC = LoginViewController()
         let sideniavigationController = UINavigationController(rootViewController: mainViewController)
-        window?.rootViewController = loginVC
+        let splashScreen = SplashViewController()
+        window?.rootViewController = splashScreen
         window?.makeKeyAndVisible()
     }
 

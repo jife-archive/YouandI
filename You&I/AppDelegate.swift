@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import KakaoSDKCommon
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        KakaoSDK.initSDK(appKey: "d0ebe1532abc9cd52e70c2621079175a")
+        FirebaseApp.configure()
         // Override point for customization after application launch.
         return true
     }
