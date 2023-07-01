@@ -28,8 +28,9 @@ class SplashViewController: UIViewController {
             
             // 애니메이션이 종료된 후에 이미지뷰와 버튼을 추가하고 제약 조건을 설정합니다.
             if finished {
-                let sideniavigationController = UINavigationController(rootViewController: MainViewController())
+                let sideniavigationController = UINavigationController(rootViewController: TabBarController())
                 let LoginVC = sideniavigationController
+                LoginVC.navigationBar.isHidden = true
                 LoginVC.modalPresentationStyle = .fullScreen
                 self.present(LoginVC,animated: true, completion: nil)
             }
@@ -39,6 +40,7 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .MainBackground
+
         layout()
     }
     

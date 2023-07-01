@@ -17,6 +17,9 @@
 		099D8DC52A4880E7009E33C1 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 099D8DC42A4880E7009E33C1 /* SideMenu */; };
 		099D8DC72A48812B009E33C1 /* SideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */; };
 		09D8DF212A46F58E009A6B17 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D8DF202A46F58E009A6B17 /* Colors.swift */; };
+		09E13FFB2A50C99500D8DCF5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E13FFA2A50C99500D8DCF5 /* TabBarController.swift */; };
+		09E13FFD2A50CB8E00D8DCF5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E13FFC2A50CB8E00D8DCF5 /* AddViewController.swift */; };
+		09E13FFF2A50CB9800D8DCF5 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E13FFE2A50CB9800D8DCF5 /* CalenderViewController.swift */; };
 		09E60F4B2A4AFA8A0057AE19 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E60F4A2A4AFA8A0057AE19 /* Fonts.swift */; };
 		09E60F4E2A4B03980057AE19 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E60F4D2A4B03980057AE19 /* LoginService.swift */; };
 		09E60F512A4B056B0057AE19 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09E60F502A4B056B0057AE19 /* KakaoSDKAuth */; };
@@ -67,6 +70,9 @@
 		098B28C02A45CF3D00FB0F81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		09D8DF202A46F58E009A6B17 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		09E13FFA2A50C99500D8DCF5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		09E13FFC2A50CB8E00D8DCF5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		09E13FFE2A50CB9800D8DCF5 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		09E60F472A4AFA770057AE19 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		09E60F482A4AFA780057AE19 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		09E60F492A4AFA780057AE19 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -175,8 +181,11 @@
 				098B28C02A45CF3D00FB0F81 /* MainViewController.swift */,
 				09E60F562A4B095C0057AE19 /* SplashViewController.swift */,
 				099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */,
-				09EB5CD42A49ABA7005BD0C1 /* LoginViewController.swift */,
 				09F2A7652A505CCA0043E1C6 /* SideMenuViewController.swift */,
+				09EB5CD42A49ABA7005BD0C1 /* LoginViewController.swift */,
+				09E13FFA2A50C99500D8DCF5 /* TabBarController.swift */,
+				09E13FFC2A50CB8E00D8DCF5 /* AddViewController.swift */,
+				09E13FFE2A50CB9800D8DCF5 /* CalenderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,12 +344,15 @@
 				09EB5CD52A49ABA7005BD0C1 /* LoginViewController.swift in Sources */,
 				099D8DC72A48812B009E33C1 /* SideMenuNavigationController.swift in Sources */,
 				09D8DF212A46F58E009A6B17 /* Colors.swift in Sources */,
+				09E13FFF2A50CB9800D8DCF5 /* CalenderViewController.swift in Sources */,
 				09F2A7662A505CCA0043E1C6 /* SideMenuViewController.swift in Sources */,
 				09E60F4E2A4B03980057AE19 /* LoginService.swift in Sources */,
 				098B28AA2A45CDAD00FB0F81 /* AppDelegate.swift in Sources */,
 				09EB5CDE2A49E426005BD0C1 /* MemortCardCollectionViewCell.swift in Sources */,
 				098B28AC2A45CDAD00FB0F81 /* SceneDelegate.swift in Sources */,
+				09E13FFB2A50C99500D8DCF5 /* TabBarController.swift in Sources */,
 				098B28C12A45CF3D00FB0F81 /* MainViewController.swift in Sources */,
+				09E13FFD2A50CB8E00D8DCF5 /* AddViewController.swift in Sources */,
 				09E60F572A4B095C0057AE19 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

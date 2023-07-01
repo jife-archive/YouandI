@@ -60,11 +60,10 @@ class MainViewController: UIViewController {
             $0.leading.equalToSuperview().offset(0)
         }
         let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: nil, action: nil)
-        barButtonItem.tintColor = UIColor.white // 원하는 색상으로 변경
-
+         barButtonItem.tintColor = UIColor.white // 원하는 색상으로 변경
          barButtonItem.target = self
          barButtonItem.action = #selector(SideMenuBtnClick)
-         navigationItem.rightBarButtonItem = barButtonItem
+         self.navigationItem.rightBarButtonItem = barButtonItem
     }
     private func addSubView(){
         topBackgroundView.addSubview(welecomeSV)
@@ -81,10 +80,9 @@ class MainViewController: UIViewController {
         let innerVisualEffectView = UIVisualEffectView(effect: vibrancyEffect)
         innerVisualEffectView.frame = self.view.frame
         blurView.contentView.addSubview(innerVisualEffectView)
-
         self.view.addSubview(blurImgView)
-
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .mainContainer // 배경색
@@ -102,8 +100,6 @@ class MainViewController: UIViewController {
         SideMenuManager.default.rightMenuNavigationController = menu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         menu.presentationStyle = .menuSlideIn
-
-              
         present(menu, animated: true, completion: nil)
     }
 }
@@ -126,8 +122,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 extension MainViewController: SideMenuNavigationControllerDelegate {
     func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
         blurImgView.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
+
     }
     func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
         blurImgView.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
