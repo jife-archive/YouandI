@@ -20,5 +20,83 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0AA11B11-6206-4261-8C76-50085EA79D8B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "You&amp;I/Controllers/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "animationView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0AA11B11-6206-4261-8C76-50085EA79D8B - b8050199cae49018"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Lottie.LottieAnimationView in variable initialization expression of You_I.SplashViewController.animationView : Lottie.LottieAnimationView"
+                  moduleName = "You&amp;I"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/choejicheol/Desktop/You&amp;I/You&amp;I/Controllers/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  uuid = "0AA11B11-6206-4261-8C76-50085EA79D8B - 48051d951ba3efff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "You_I.SplashViewController.animationView.getter : Lottie.LottieAnimationView"
+                  moduleName = "You&amp;I"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/choejicheol/Desktop/You&amp;I/You&amp;I/Controllers/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "0AA11B11-6206-4261-8C76-50085EA79D8B - baa9f0ce93b1bb1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "You_I.SplashViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; You_I.SplashViewController"
+                  moduleName = "You&amp;I"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/choejicheol/Desktop/You&amp;I/You&amp;I/Controllers/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "0AA11B11-6206-4261-8C76-50085EA79D8B - ba596c25ca267322"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "You_I.SplashViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;You_I.SplashViewController&gt;"
+                  moduleName = "You&amp;I"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/choejicheol/Desktop/You&amp;I/You&amp;I/Controllers/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

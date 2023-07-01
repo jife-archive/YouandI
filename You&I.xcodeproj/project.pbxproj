@@ -54,6 +54,7 @@
 		09EB5CD82A49B752005BD0C1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 09EB5CD72A49B752005BD0C1 /* Lottie */; };
 		09EB5CDC2A49BE58005BD0C1 /* 99228-heart2heart.json in Resources */ = {isa = PBXBuildFile; fileRef = 09EB5CDB2A49BE58005BD0C1 /* 99228-heart2heart.json */; };
 		09EB5CDE2A49E426005BD0C1 /* MemortCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EB5CDD2A49E426005BD0C1 /* MemortCardCollectionViewCell.swift */; };
+		09F2A7662A505CCA0043E1C6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2A7652A505CCA0043E1C6 /* SideMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +64,7 @@
 		098B28B22A45CDAF00FB0F81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		098B28B52A45CDAF00FB0F81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		098B28B72A45CDAF00FB0F81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		098B28C02A45CF3D00FB0F81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		098B28C02A45CF3D00FB0F81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNavigationController.swift; sourceTree = "<group>"; };
 		09D8DF202A46F58E009A6B17 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		09E60F472A4AFA770057AE19 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		09EB5CD42A49ABA7005BD0C1 /* LoginViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09EB5CDB2A49BE58005BD0C1 /* 99228-heart2heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "99228-heart2heart.json"; sourceTree = "<group>"; };
 		09EB5CDD2A49E426005BD0C1 /* MemortCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemortCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		09F2A7652A505CCA0043E1C6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,9 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				098B28C02A45CF3D00FB0F81 /* MainViewController.swift */,
+				09E60F562A4B095C0057AE19 /* SplashViewController.swift */,
 				099D8DC62A48812B009E33C1 /* SideMenuNavigationController.swift */,
 				09EB5CD42A49ABA7005BD0C1 /* LoginViewController.swift */,
-				09E60F562A4B095C0057AE19 /* SplashViewController.swift */,
+				09F2A7652A505CCA0043E1C6 /* SideMenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				09EB5CD52A49ABA7005BD0C1 /* LoginViewController.swift in Sources */,
 				099D8DC72A48812B009E33C1 /* SideMenuNavigationController.swift in Sources */,
 				09D8DF212A46F58E009A6B17 /* Colors.swift in Sources */,
+				09F2A7662A505CCA0043E1C6 /* SideMenuViewController.swift in Sources */,
 				09E60F4E2A4B03980057AE19 /* LoginService.swift in Sources */,
 				098B28AA2A45CDAD00FB0F81 /* AppDelegate.swift in Sources */,
 				09EB5CDE2A49E426005BD0C1 /* MemortCardCollectionViewCell.swift in Sources */,

@@ -8,8 +8,10 @@
 import UIKit
 import SnapKit
 import Then
+import SideMenu
 
 class MainViewController: UIViewController {
+    private let blurImgView = UIImageView()
 
     private let topBackgroundView = UIView().then{
         $0.backgroundColor = .MainBackground
@@ -41,6 +43,10 @@ class MainViewController: UIViewController {
     }
     private func layout(){
 
+        view.addSubview(blurImgView)
+         blurImgView.snp.makeConstraints {
+             $0.edges.equalToSuperview()
+         }
         welecomeSV.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
@@ -56,24 +62,49 @@ class MainViewController: UIViewController {
         let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: nil, action: nil)
         barButtonItem.tintColor = UIColor.white // 원하는 색상으로 변경
 
-        self.navigationItem.rightBarButtonItem = barButtonItem
-
+         barButtonItem.target = self
+         barButtonItem.action = #selector(SideMenuBtnClick)
+         navigationItem.rightBarButtonItem = barButtonItem
     }
     private func addSubView(){
-
         topBackgroundView.addSubview(welecomeSV)
         welecomeSV.addArrangedSubview(nicknameLabel)
         welecomeSV.addArrangedSubview(welecomeLabel)
         view.addSubview(topBackgroundView)
+    }
+    private func blureffect(){
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = self.view.frame
+        self.blurImgView.addSubview(blurView)
+        let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
+        let innerVisualEffectView = UIVisualEffectView(effect: vibrancyEffect)
+        innerVisualEffectView.frame = self.view.frame
+        blurView.contentView.addSubview(innerVisualEffectView)
+
+        self.view.addSubview(blurImgView)
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .mainContainer // 배경색
         addSubView()
         layout()
-        let LoginVC = LoginViewController()
+        blureffect()
+        blurImgView.isHidden = true
+      /*  let LoginVC = LoginViewController()
         LoginVC.modalPresentationStyle = .fullScreen
-        self.present(LoginVC,animated: true, completion: nil)
+        self.present(LoginVC,animated: true, completion: nil)*/
+    }
+    @objc private func SideMenuBtnClick() {
+        let sideMenuViewController = SideMenuViewController()
+        let menu = SideMenuNavigationController(rootViewController: sideMenuViewController)
+        SideMenuManager.default.rightMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+        menu.presentationStyle = .menuSlideIn
+
+              
+        present(menu, animated: true, completion: nil)
     }
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -90,5 +121,13 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: self.view.frame.width - 48, height: 400)
+    }
+}
+extension MainViewController: SideMenuNavigationControllerDelegate {
+    func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
+        blurImgView.isHidden = false
+    }
+    func sideMenuWillDisappear(menu: SideMenuNavigationController, animated: Bool) {
+        blurImgView.isHidden = true
     }
 }
