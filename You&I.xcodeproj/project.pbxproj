@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093379842A56BCB500CC3BB8 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 093379832A56BCB500CC3BB8 /* PanModal */; };
 		098B28AA2A45CDAD00FB0F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B28A92A45CDAD00FB0F81 /* AppDelegate.swift */; };
 		098B28AC2A45CDAD00FB0F81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B28AB2A45CDAD00FB0F81 /* SceneDelegate.swift */; };
 		098B28B32A45CDAF00FB0F81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 098B28B22A45CDAF00FB0F81 /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093379842A56BCB500CC3BB8 /* PanModal in Frameworks */,
 				098B28C42A45D2D100FB0F81 /* SnapKit in Frameworks */,
 				099D8DC52A4880E7009E33C1 /* SideMenu in Frameworks */,
 				09E60F762A4B14B60057AE19 /* FirebaseAnalytics in Frameworks */,
@@ -275,6 +277,7 @@
 				09E60FA32A4B14B70057AE19 /* FirebaseRemoteConfigSwift */,
 				09E60FA52A4B14B70057AE19 /* FirebaseStorage */,
 				09E60FA72A4B14B70057AE19 /* FirebaseStorageCombine-Community */,
+				093379832A56BCB500CC3BB8 /* PanModal */,
 			);
 			productName = "You&I";
 			productReference = 098B28A62A45CDAC00FB0F81 /* You&I.app */;
@@ -311,6 +314,7 @@
 				09EB5CD62A49B752005BD0C1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				09E60F4F2A4B056B0057AE19 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				09E60F742A4B14B60057AE19 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				093379822A56BCB500CC3BB8 /* XCRemoteSwiftPackageReference "PanModal" */,
 			);
 			productRefGroup = 098B28A72A45CDAC00FB0F81 /* Products */;
 			projectDirPath = "";
@@ -567,6 +571,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		093379822A56BCB500CC3BB8 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/slackhq/PanModal.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		098B28C22A45D2D100FB0F81 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -618,6 +630,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		093379832A56BCB500CC3BB8 /* PanModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 093379822A56BCB500CC3BB8 /* XCRemoteSwiftPackageReference "PanModal" */;
+			productName = PanModal;
+		};
 		098B28C32A45D2D100FB0F81 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 098B28C22A45D2D100FB0F81 /* XCRemoteSwiftPackageReference "SnapKit" */;

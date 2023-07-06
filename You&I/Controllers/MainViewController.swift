@@ -13,6 +13,13 @@ import SideMenu
 class MainViewController: UIViewController {
     private let blurImgView = UIImageView()
 
+    private let bottomLabel = UILabel().then{
+        $0.text="아래 버튼을 눌러 오늘의 일을 기록하세요!"
+        $0.textColor = .darkGray
+        $0.font = .pretendard(.regular, size: 15)
+        $0.numberOfLines = 0
+
+    }
     private let topBackgroundView = UIView().then{
         $0.backgroundColor = .MainBackground
     }
@@ -35,6 +42,7 @@ class MainViewController: UIViewController {
         layout.scrollDirection = .horizontal
         $0.decelerationRate = .fast
         $0.backgroundColor = .clear
+        $0.showsHorizontalScrollIndicator = false
     }
     private let welecomeSV = UIStackView().then{
         $0.axis = .vertical
@@ -42,7 +50,17 @@ class MainViewController: UIViewController {
         $0.distribution = .fill
     }
     private func layout(){
+        bottomLabel.snp.makeConstraints{
+            $0.bottom.equalTo(memorycollectionView).offset(100)
+            $0.centerX.equalToSuperview()
 
+        }
+        memorycollectionView.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(207)
+            $0.leading.equalToSuperview().offset(0)
+            $0.trailing.equalToSuperview().offset(0)
+            $0.height.equalTo(400)
+        }
         view.addSubview(blurImgView)
          blurImgView.snp.makeConstraints {
              $0.edges.equalToSuperview()
@@ -70,6 +88,8 @@ class MainViewController: UIViewController {
         welecomeSV.addArrangedSubview(nicknameLabel)
         welecomeSV.addArrangedSubview(welecomeLabel)
         view.addSubview(topBackgroundView)
+        view.addSubview(memorycollectionView)
+        view.addSubview(bottomLabel)
     }
     private func blureffect(){
         let blurEffect = UIBlurEffect(style: .dark)
@@ -90,6 +110,8 @@ class MainViewController: UIViewController {
         layout()
         blureffect()
         blurImgView.isHidden = true
+        self.memorycollectionView.delegate = self
+        self.memorycollectionView.dataSource = self
       /*  let LoginVC = LoginViewController()
         LoginVC.modalPresentationStyle = .fullScreen
         self.present(LoginVC,animated: true, completion: nil)*/
@@ -105,19 +127,52 @@ class MainViewController: UIViewController {
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MemortCardCollectionViewCell.identifier, for: indexPath) as! MemortCardCollectionViewCell
+
+        if indexPath.row == 0{
+            cell.moreButton.isHidden = true
+        }
+        else{
+            cell.moreButton.isHidden = false
+            
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 12
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: self.view.frame.width - 48, height: 400)
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return .init(width: 24, height: 1)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return .init(width: 24, height: 1)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return .init(width: self.view.frame.width - 48, height: 390)
+    }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let cellWidthIncludingSpacing = self.view.frame.width - 48 + 12
+        
+        let estimatedIndex = scrollView.contentOffset.x / cellWidthIncludingSpacing
+        let index: Int
+        
+        if velocity.x > 0 {
+            index = Int(ceil(estimatedIndex))
+        } else if velocity.x < 0 {
+            index = Int(floor(estimatedIndex))
+        } else {
+            index = Int(round(estimatedIndex))
+        }
+    
+        targetContentOffset.pointee = CGPoint(x: CGFloat(index) * cellWidthIncludingSpacing, y: 0)
+    }
+    
 }
 extension MainViewController: SideMenuNavigationControllerDelegate {
     func sideMenuWillAppear(menu: SideMenuNavigationController, animated: Bool) {
@@ -130,3 +185,5 @@ extension MainViewController: SideMenuNavigationControllerDelegate {
         self.tabBarController?.tabBar.isHidden = false
     }
 }
+
+

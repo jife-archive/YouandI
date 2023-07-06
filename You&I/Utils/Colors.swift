@@ -20,7 +20,7 @@ extension UIColor {
     class var MainBackground: UIColor { UIColor(named: "MainBackground") ?? UIColor() }
     class var barColor: UIColor { UIColor(named: "barColor") ?? UIColor() }
     class var mainContainer: UIColor { UIColor(named: "mainContainer") ?? UIColor() }
-
+    class var ContinerPink: UIColor { UIColor(named: "ContinerPink") ?? UIColor() }
     // MARK: 메인 테마 색 또는 자주 쓰는 색을 정의
   
 }
